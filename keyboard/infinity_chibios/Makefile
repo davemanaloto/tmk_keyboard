@@ -12,6 +12,8 @@ SRC =	matrix.c \
 	keymap_common.c \
 	led.c
 
+KEYMAP = dave
+
 ifdef KEYMAP
     SRC := keymap_$(KEYMAP).c $(SRC)
 else

@@ -51,8 +51,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 )
 
 /* Keymap for Infiity prototype */
-#define INFINITY_PROTOTYPE
+//#define INFINITY_PROTOTYPE
 
+#define ONESHOT_TIMEOUT 200
+#define TAPPING_TOGGLE 2
 
 /*
  * Feature disable options
