@@ -27,9 +27,9 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP( \
            ESC,  1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, BSLS,GRV, \
            TAB,  Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSPC, \
-           LCTL,FN7,  S,   D,   F,   G,   H,   J,   K,   L,SCLN,   QUOT,ENT, \
-           LSFT, Z,   X,   C,   V,   B,   N,   M,   COMM,DOT,  SLSH,FN2,FN1, \
-           FN0,LALT,LGUI,           SPC,                 RGUI,   FN3,FN4,FN5),
+           CAPS,FN7,  S,   D,   F,   G,   H,   J,   K,   L,SCLN,   QUOT,ENT, \
+           LSFT,FN8,  X,   C,   V,   B,   N,   M,COMM,DOT, SLSH,   RSFT,FN1, \
+           FN0,LALT,LGUI,           SPC,                 RGUI,  RALT,FN4,RCTL),
 
    /* Layer 1: Arrow/NumPad mode
      * ,-----------------------------------------------------------.
@@ -67,9 +67,9 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [2] =
     KEYMAP(GRV, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, INS, DEL, \
-           APP,MRWD,MPLY,MFFD,  NO,  NO,  NO,PGUP,HOME,  NO,  NO,SLCK,PAUS,DEL, \
+            NO,MRWD,MPLY,MFFD,  NO,  NO,  NO,PGUP,HOME,  NO,  NO,SLCK,PAUS,DEL, \
             NO,VOLD,VOLU,MUTE,  NO,  NO,LEFT,DOWN,UP  ,RGHT,  NO,  NO,  NO, \
-            NO, NO,  NO,  NO,  NO,  NO,  NO,PGDN,END ,  NO,  NO,PGUP,  NO, \
+            NO,TRNS,  NO,  NO,  NO,  NO,  NO,PGDN,END ,  NO,  NO,PGUP,  NO, \
           TRNS,  NO,  NO,            NO,                 NO,HOME,PGDN,END),
 
    /* Layer 3: Arrow/NumPad mode
@@ -144,5 +144,6 @@ const uint16_t fn_actions[] = {
     [5] = ACTION_MODS_TAP_KEY(MOD_RCTL, KC_RIGHT), // FN5
     [6] = ACTION_MODS_TAP_KEY(MOD_RGUI, KC_BSPC), // FN6
     [7] = ACTION_LAYER_TAP_KEY(5, KC_A ),     // FN7
+    [8] = ACTION_LAYER_TAP_KEY(2, KC_Z ),     // FN8
 };
 
