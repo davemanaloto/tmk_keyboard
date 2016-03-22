@@ -28,8 +28,8 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            ESC,  1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, BSLS,GRV, \
            TAB,  Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSPC, \
            CAPS, A,   S,   D,   F,   G,   H,   J,   K,   L,SCLN,   QUOT,ENT, \
-           LSFT,  Z,  X,   C,   V,   B,   N,   M,COMM,DOT, SLSH,   RSFT,FN1, \
-           FN0,LALT,LGUI,           SPC,                 RGUI,  RALT,FN4,RCTL),
+           LSFT,  Z,  X,   C,   V,   B,   N,   M,COMM,DOT, SLSH,   FN2,FN1, \
+           FN0,LALT,LGUI,           SPC,                 RGUI,  FN3,FN4,FN5),
 
    /* Layer 1: Arrow/NumPad mode
      * ,-----------------------------------------------------------.
@@ -138,6 +138,9 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const uint16_t fn_actions[] = {
     [0] = ACTION_LAYER_MOMENTARY(2),     // FN0
     [1] = ACTION_LAYER_TAP_TOGGLE(3),        // FN1
+    [2] = ACTION_MODS_TAP_KEY(MOD_RSFT, KC_UP), // FN2
+    [3] = ACTION_MODS_TAP_KEY(MOD_RALT, KC_LEFT), // FN3
     [4] = ACTION_MODS_TAP_KEY(MOD_RCTL, KC_DOWN), // FN4
+    [5] = ACTION_MODS_TAP_KEY(MOD_RCTL, KC_RIGHT), // FN5
 };
 
